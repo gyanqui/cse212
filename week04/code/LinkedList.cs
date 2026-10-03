@@ -216,16 +216,11 @@ public class LinkedList : IEnumerable<int>
     {
         // TODO Problem 5
         //yield return 0; // replace this line with the correct yield return statement(s)
-        // Comenzamos desde el último nodo.
         var curr = _tail;
 
-        // Continuamos mientras exista un nodo.
         while (curr is not null)
         {
-            // Entregamos el valor actual al foreach y pausamos.
             yield return curr.Data;
-
-            // Cuando el foreach continúa, retrocedemos un nodo.
             curr = curr.Prev;
         }
     }
